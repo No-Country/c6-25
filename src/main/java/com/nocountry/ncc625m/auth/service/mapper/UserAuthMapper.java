@@ -4,8 +4,6 @@ import com.nocountry.ncc625m.auth.dto.UserDTO;
 import com.nocountry.ncc625m.model.UserEntity;
 import org.springframework.stereotype.Component;
 
-import java.util.Date;
-
 @Component
 public class UserAuthMapper {
 

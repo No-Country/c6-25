@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 @Getter
@@ -22,9 +23,11 @@ public class UserDTO {
     private String password;
 
     @NotBlank(message = "Name can not be empty.")
+    @Pattern(regexp = "[a-zA-Z]*", message = "Name may only contains letters.")
     private String name;
 
     @NotBlank(message = "Lastname can not be empty.")
+    @Pattern(regexp = "[a-zA-Z]*", message = "Lastname may only contains letters.")
     private String lastname;
 
     private String photo;

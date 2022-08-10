@@ -7,6 +7,7 @@ import lombok.Data;
 @Builder
 public class Jwt {
 
+    private String email;
     private String token;
 
 }
