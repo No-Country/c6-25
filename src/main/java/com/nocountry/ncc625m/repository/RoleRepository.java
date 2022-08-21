@@ -1,12 +1,14 @@
 package com.nocountry.ncc625m.repository;
 
-import com.nocountry.ncc625m.model.Role;
+
+import com.nocountry.ncc625m.entity.RoleEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Set;
+
 @Repository
-public interface RoleRepository extends JpaRepository<Role, Long> {
+public interface RoleRepository extends JpaRepository<RoleEntity, Long> {
 
-    Role findByName (String name);
-
+    Set<RoleEntity> findByName(String roleName);
 }

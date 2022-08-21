@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "3b2f05e3-8f9c-4a7e-bdb0-ae34aa791862",
+		"name": "MyWallet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20422230"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"Fulano\",\r\n    \"lastName\":\"de Tal\",\r\n    \"age\":19,\r\n    \"email\":\"siun@email.com\",\r\n    \"password\":\"pass\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"siun@email.com\",\r\n    \"password\":\"pass\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzaXVuQGVtYWlsLmNvbSIsImlhdCI6MTY2MTExNTY0OCwiZXhwIjoxNjYxMTc2MTI4fQ.yJGi3kL26VI4LLKJKcAXdwk7JqN1zgL_Po5N3MEVywj2HBvKSwIaWCtiRpGFvw1OTPhrH9swVnZzl9Ix9vZVlQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/auth/me",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Funcionalidades",
+			"item": [
+				{
+					"name": "Depositar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzaXVuQGVtYWlsLmNvbSIsImlhdCI6MTY2MTExNTY0OCwiZXhwIjoxNjYxMTc2MTI4fQ.yJGi3kL26VI4LLKJKcAXdwk7JqN1zgL_Po5N3MEVywj2HBvKSwIaWCtiRpGFvw1OTPhrH9swVnZzl9Ix9vZVlQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\":5000.05,\r\n    \"from\":\"Banco Santander\",\r\n    \"to\":\"MyWallet\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/clientes/4/newDeposit",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"4",
+								"newDeposit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Debitar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzaXVuQGVtYWlsLmNvbSIsImlhdCI6MTY2MTExNTY0OCwiZXhwIjoxNjYxMTc2MTI4fQ.yJGi3kL26VI4LLKJKcAXdwk7JqN1zgL_Po5N3MEVywj2HBvKSwIaWCtiRpGFvw1OTPhrH9swVnZzl9Ix9vZVlQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\":5000.05,\r\n    \"from\":\"MyWallet\",\r\n    \"to\":\"Netflix\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/clientes/4/newDebit",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"4",
+								"newDebit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pagar con API Externa",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzaXVuQGVtYWlsLmNvbSIsImlhdCI6MTY2MTExNTY0OCwiZXhwIjoxNjYxMTc2MTI4fQ.yJGi3kL26VI4LLKJKcAXdwk7JqN1zgL_Po5N3MEVywj2HBvKSwIaWCtiRpGFvw1OTPhrH9swVnZzl9Ix9vZVlQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\":5000.05,\r\n    \"from\":\"Banco Santander\",\r\n    \"to\":\"Netflix\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/clientes/4/externalPayment",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"4",
+								"externalPayment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
