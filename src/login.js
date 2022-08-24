@@ -1,53 +1,30 @@
-const form = document.getElementById('form');
-const email = document.getElementById('email');
-const password = document.getElementById('password');
+// Call the dataTables jQuery plugin
+$(document).ready(function() {
 
-route.post('/api/auth/login');
-
-form.addEventListener('submit', e => {
-	e.preventDefault();
-	
-	checkInputs();
+    //on ready
 });
 
-function checkInputs() {
+async function login(){
 
-	const emailValue = email.value.trim();
-	const passwordValue = password.value.trim();
-	
-	if(usuarioValue === '') {
-		setErrorFor(usuario, 'No puede dejar el usuario en blanco');
-	} else {
-		setSuccessFor(usuario);
-	}
-	
-	if(emailValue === '') {
-		setErrorFor(email, 'No puede dejar el email en blanco');
-	} else if (!isEmail(emailValue)) {
-		setErrorFor(email, 'No ingreso un email válido');
-	} else {
-		setSuccessFor(email);
-	}
-	
-	if(passwordValue === '') {
-		setErrorFor(password, 'Debe ingresar password');
-	} else {
-		setSuccessFor(password);
-	}
-}
+    let datos = {};
 
-function setErrorFor(input, message) {
-	const formControl = input.parentElement;
-	const small = formControl.querySelector('small');
-	formControl.className = 'form-control error';
-	small.innerText = message;
-}
+    datos.email = document.getElementById('txtEmail').value;
+    datos.password = document.getElementById('txtPassword').value;
 
-function setSuccessFor(input) {
-	const formControl = input.parentElement;
-	formControl.className = 'form-control success';
-}
+    const request = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(datos)
+      });
+    const respuesta = await request.json();
 
-function isEmail(email) {
-	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+    if(respuesta == null){
+        alert("Ingreso datos incorrectos");
+    } else {
+        localStorage.setItem("token", respuesta.token);
+        window.location.href = respuesta.url;
+    }
 }

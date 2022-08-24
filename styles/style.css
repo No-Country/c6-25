@@ -1,4 +1,10 @@
 :root {
+  --color-background:#181a1e;
+  --color-white: #202528;
+  --color-dark:#edeffd;
+  --color-dark-variant:#a3bdcc;
+  --color-light:rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 2rem 3rem var(var(--color-light));
   --card-border-radius:2rem;
   --border-radius-1:0.4rem;
   --border-radius-2:0.8rem;
@@ -11,6 +17,15 @@
 
 }
 
+/*-------DARK THEME-------*/
+.dark-theme-variables {
+  --color-background:#181a1e;
+  --color-white: #202528;
+  --color-dark:#edeffd;
+  --color-dark-variant:#a3bdcc;
+  --color-light:rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 2rem 3rem var(var(--color-light));
+}
 * {
   margin: 0;
   padding: 0;
@@ -580,7 +595,7 @@ main .recent-orders a {
   }
   aside {
     position:fixed;
-    left: 0;
+    left: -100%;
     background-color: white;
     width: 18rem;
     z-index: 3;
@@ -588,6 +603,13 @@ main .recent-orders a {
     height: 100vh;
     padding-right: var(--card-padding);
     display: none;
+    animation: showMenu 400ms ease forwards;
+  }
+
+  @keyframes showMenu {
+    to{
+       left:0;
+    }
   }
   aside .logo {
   margin-left: 1rem;

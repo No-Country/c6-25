@@ -1,0 +1,19 @@
+{
+  "name": "dashboard_my_wallet",
+  "version": "1.0.0",
+  "description": "My Wallet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/No-Country/c6-25.git"
+  },
+  "author": "Diego Ignacio Silva Cordoba",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/No-Country/c6-25/issues"
+  },
+  "homepage": "https://github.com/No-Country/c6-25#readme"
+}
