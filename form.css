@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+}
+
+header {
+  display: flex;
+  background-color: white;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  margin-right: 10px;
+}
+
+#menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu ul li {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px;
+}
+
+#menu ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.login-container {
+  height: 40em;
+  width: 60em;
+  margin: 6em auto;
+  border-radius: 10px;
+  border: solid 3px rgb(221, 201, 222);
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.login-info-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 0.5rem;
+  background-color: var(--login-bg);
+}
+
+.image-container {
+  padding: 0rem;
+  width: 70%;
+  background-color: var(--image-bg);
+  box-sizing: border-box;
+}
+
+.title {
+  margin-right: 150px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: rgb(32, 26, 19);
+}
+.title-2 {
+ 
+  margin-left: 60px;
+  padding-bottom: 0px;
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: rgb(241, 16, 200);
+}
+.title-3 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: rgb(138, 135, 131);
+}
+
+.social-login {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.social-login-element {
+  width: 12.5rem;
+  height: 3.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+  border: 1px solid var(--button-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-login-element img {
+  width: 1.875rem;
+  height: 1.875rem;
+  position: relative;
+  top: 0;
+  left: -0.625rem;
+}
+
+.social-login-element:hover {
+  background-color: rgb(243, 169, 51);
+}
+
+.login-info-container > p {
+  font-size: 1.25em;
+  margin-top: 1.5em;
+}
+
+.formulario {
+  height: 55%;
+  width: 85%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+}
+
+.form-control {
+  height: 10%;
+  width: 90%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+}
+.input,
+.btn {
+  width: 90%;
+  height: 3.125rem;
+  font-size: 1em;
+}
+
+.input {
+  padding-left: 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+  border: solid 1px black;
+}
+
+.input:hover {
+  border: 2px solid var(--button-bg);
+}
+
+.btn {
+  width: 80%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgb(255, 166, 0);
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(226, 220, 208);
+  cursor: pointer;
+}
+
+.inputs-container p {
+  margin: 0;
+}
+
+.span {
+  color: rgb(240, 163, 20);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+  .login-container {
+    width: 70%;
+    margin-top: 3rem;
+  }
+  .login-info-container {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .image-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .login-container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .login-container {
+    height: 90%;
+  }
+
+  .social-login {
+    flex-direction: column;
+    align-items: center;
+    height: 30%;
+  }
+
+  .login-info-container > p {
+    margin: 0;
+  }
+}
