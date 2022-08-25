@@ -4,7 +4,7 @@ $(document).ready(function() {
     //on ready
 });
 
-async function login(){
+async function iniciarSesion(){
 
     let datos = {};
 

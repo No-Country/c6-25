@@ -4,7 +4,7 @@ $(document).ready(function() {
     //on ready
 });
 
-async function registro(){
+async function iniciarRegistro(){
 
     let datos = {};
 
@@ -14,11 +14,14 @@ async function registro(){
 	datos.dni = document.getElementById('txtDni').value;
 	datos.edad = document.getElementById('txtEdad').value;
     datos.password = document.getElementById('txtPassword').value;
-
+   
     let repetirPassword = document.getElementById('txtRepetirPassword').value;
 
     if(repetirPassword != datos.password){
-        alert("Contraseñas ingresadas diferentes");
+        Swal.fire({
+        icon: 'error',
+        text: 'Ingreso contraseñas diferentes'
+})
         return;
     }
 
@@ -30,6 +33,12 @@ async function registro(){
         },
         body: JSON.stringify(datos)
       });
-      window.location.href = 'registro.html';
+      const respuesta = await request.json();
 
+    if(respuesta == null){
+        alert("Ingreso datos incorrectos");
+    } else {
+        localStorage.setItem("token", respuesta.token);
+        window.location.href = 'index.html';
+    }
 }

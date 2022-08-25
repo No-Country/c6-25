@@ -51,7 +51,10 @@
     <input class="input" type="dni" placeholder="Ingresese Dni" id="txtDni" />
     <input class="input" type="edad" placeholder="Ingrese edad" id="txtEdad" />
     <input class="input" type="password" placeholder="Crear password" id="txtPassword" />
-    <button class="btn" type="submit">Crear usuario</button>
+    <input class="input" type="password" placeholder="Repetir password" id="txtRepetirPassword" />
+    <a onclick="iniciarRegistro()" href="#" class="btn">
+      Crear usuario
+    </a>
     <p class="warnings" id="warnings"></p>
   </form>
   </div>
@@ -59,6 +62,7 @@
   </div>
 
   <script src="registro.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
