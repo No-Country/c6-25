@@ -1,7 +1,6 @@
-// Call the dataTables jQuery plugin
+
 $(document).ready(function() {
 
-    //on ready
 });
 
 async function iniciarRegistro(){
@@ -35,8 +34,11 @@ async function iniciarRegistro(){
       });
       const respuesta = await request.json();
 
-    if(respuesta == null){
-        alert("Ingreso datos incorrectos");
+    if(respuesta == errors[0]){ 
+        Swal.fire({
+        icon: 'error',
+        text: 'Ingreso datos incorrectos'
+})
     } else {
         localStorage.setItem("token", respuesta.token);
         window.location.href = 'index.html';

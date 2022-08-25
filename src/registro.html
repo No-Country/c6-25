@@ -16,7 +16,6 @@
   <header>
     <div class="logo">
       <img src="/img/Logo.png" alt="Logo" />
-      <h2 class="name-app"></h2>
     </div>
     <div id="menu">
       <ul>
@@ -26,7 +25,7 @@
       </ul>
     </div>
   </header>
-
+<!-- Form -->
   <form action="" id="form" method="post">
     <div class="login-container">
       <div class="login-info-container">
@@ -44,15 +43,16 @@
           </div>
         </div>
   </form>
+  <!-- Form -->
   <form class="inputs-container" method="POST">
-    <input class="input" type="nombre" placeholder="Ingrese nombre" id="txtNombre" />
-    <input class="input" type="apellido" placeholder="Ingrese apellido" id="txtApellido" />
+    <input class="input" type="firtsName" placeholder="Ingrese nombre" id="txtNombre" />
+    <input class="input" type="lastName" placeholder="Ingrese apellido" id="txtApellido" />
     <input class="input" type="email" placeholder="Ingrese email" id="txtEmail" />
     <input class="input" type="dni" placeholder="Ingresese Dni" id="txtDni" />
-    <input class="input" type="edad" placeholder="Ingrese edad" id="txtEdad" />
+    <input class="input" type="age" placeholder="Ingrese edad" id="txtEdad" />
     <input class="input" type="password" placeholder="Crear password" id="txtPassword" />
     <input class="input" type="password" placeholder="Repetir password" id="txtRepetirPassword" />
-    <a onclick="iniciarRegistro()" href="#" class="btn">
+    <a onclick="iniciarRegistro()" href="#" class="btn"> 
       Crear usuario
     </a>
     <p class="warnings" id="warnings"></p>
