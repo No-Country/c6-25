@@ -26,8 +26,8 @@ async function iniciarRegistro(){
     const request = await fetch('/api/auth/register', {
         method: 'POST',
         headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
         },
         body: JSON.stringify(datos)
       });
