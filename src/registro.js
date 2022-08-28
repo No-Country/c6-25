@@ -10,7 +10,6 @@ async function iniciarRegistro(){
     datos.nombre = document.getElementById('txtNombre').value;
     datos.apellido = document.getElementById('txtApellido').value;
 	datos.email = document.getElementById('txtEmail').value;
-	datos.dni = document.getElementById('txtDni').value;
 	datos.edad = document.getElementById('txtEdad').value;
     datos.password = document.getElementById('txtPassword').value;
    

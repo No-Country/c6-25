@@ -7,13 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/No-Country/c6-25.git"
+    "type": "git"
   },
   "author": "Diego Ignacio Silva Cordoba",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/No-Country/c6-25/issues"
-  },
-  "homepage": "https://github.com/No-Country/c6-25#readme"
+  }
 }
