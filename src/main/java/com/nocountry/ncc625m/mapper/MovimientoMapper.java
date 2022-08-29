@@ -21,6 +21,8 @@ public class MovimientoMapper {
                 .date(entity.getDate())
                 .type(entity.getType())
                 .amount(entity.getAmount())
+                .from(entity.getFrom())
+                .to(entity.getTo())
                 .final_balance(entity.getFinal_balance())
                 .build();
     }
