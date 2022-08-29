@@ -7,17 +7,12 @@
     <title>Pago de servicios</title>
     <link rel="shortcut icon" type="logo/png" href="/img/Logo.png" />
     <link rel="stylesheet" href="../styles/pago.css" />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
   </head>
 
   <body>
-    <link
-      href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"
-      rel="stylesheet"
-      id="bootstrap-css"
-    />
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
     <div class="container">
       <div class="logo">
         <img src="../img/Logo.png" alt="logo" />
@@ -34,12 +29,13 @@
                   >Concepto</label
                 >
                 <div class="col-sm-9">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="concept"
-                    name="concept"
-                  />
+                  <select class="form-control" id="concept" name="concept">
+                    <option>Agua</option>
+                    <option>Luz</option>
+                    <option>Telefonia</option>
+                    <option>Internet</option>
+                    <option>Suscripciones</option>
+                  </select>
                 </div>
               </div>
               <div class="form-group">
@@ -47,12 +43,23 @@
                   >Descripcion</label
                 >
                 <div class="col-sm-9">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="description"
-                    name="description"
-                  />
+                  <select class="form-control" id="description" name="description">
+                    <option>Aguas Argentinas</option>
+                    <option>Aguas de Cordoba</option>
+                    <option>Aguas de La Rioja</option>
+                    <option>Edenor</option>
+                    <option>Edesur</option>
+                    <option>Edelar</option>
+                    <option>Claro</option>
+                    <option>Personal</option>
+                    <option>Movistar</option>
+                    <option>Fibertel</option>
+                    <option>Flow</option>
+                    <option>Internet para todos</option>
+                    <option>Netflix</option>
+                    <option>HBO MAX</option>
+                    <option>Disney +</option>
+                  </select>
                 </div>
               </div>
               <div class="form-group">
@@ -67,26 +74,11 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="status" class="col-sm-3 control-label"
-                  >Estado</label
-                >
                 <div class="col-sm-9">
-                  <select class="form-control" id="status" name="status">
-                    <option>Pagada</option>
-                    <option>No pagado</option>
-                    <!--agregar mas opciones-->
-                  </select>
                 </div>
               </div>
               <div class="form-group">
-                <label for="date" class="col-sm-3 control-label">Fecha</label>
                 <div class="col-sm-9">
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="date"
-                    name="date"
-                  />
                 </div>
               </div>
               <div class="form-group">
@@ -111,30 +103,24 @@
                 <table class="table preview-table">
                   <thead>
                     <tr>
-                      <th>Concepto</th>
-                      <th>Descripcion</th>
                       <th>Monto</th>
-                      <th>Estado</th>
-                      <th>Fecha</th>
                     </tr>
                   </thead>
                   <tbody></tbody>
-                  <!-- Agregar -->
                 </table>
               </div>
             </div>
           </div>
           <div class="row text-right">
             <div class="col-xs-12">
-              <h4>
-                Total: <strong><span class="preview-total"></span></strong>
-              </h4>
             </div>
           </div>
           <div class="row">
             <div class="col-xs-12">
               <hr style="border: 1px dashed #dddddd" />
-              <button type="button" class="btn">Enviar</button>
+              <a onclick="pagarServicios()" href="#" class="btn">
+                Pagar
+              </a>
               <!--Incorporar Onclick Js-->
             </div>
           </div>

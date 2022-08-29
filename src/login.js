@@ -1,7 +1,6 @@
-// Call the dataTables jQuery plugin
+
 $(document).ready(function() {
 
-    //on ready
 });
 
 async function iniciarSesion(){
@@ -22,7 +21,10 @@ async function iniciarSesion(){
     const respuesta = await request.json();
 
     if(respuesta == null){
-        alert("Ingreso datos incorrectos");
+        Swal.fire({
+        icon: 'error',
+        text: 'Ingreso datos incorrectos'
+})
     } else {
         localStorage.setItem("token", respuesta.token);
         window.location.href = respuesta.url;
