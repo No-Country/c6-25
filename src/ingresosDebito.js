@@ -23,9 +23,9 @@ Swal.fire({
     let datos = {};
     datos.amount = document.getElementById('amount').value;
     datos.from = document.getElementById('MyWallet').value;
-    datos.to = document.getElementById('numeroCard').value;
+    datos.to = document.getElementById('numeroCuenta').value;
 
-    const request = await fetch('/api/clientes/{id}/newDeposit', {
+    const request = await fetch('/api/clientes/{id}/externalPayment	', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
