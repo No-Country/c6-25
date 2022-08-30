@@ -1,0 +1,21 @@
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.btn {
+  width: 100%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgb(20, 14, 1);
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(243, 156, 6);
+  cursor: pointer;
+}

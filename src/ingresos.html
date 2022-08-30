@@ -8,6 +8,7 @@
     <title>Ingresos</title>
     <link rel="shortcut icon" type="logo/png" href="/img/Logo.png" />
     <link rel="stylesheet" href="../styles/ingresos.css">
+    <link rel="stylesheet" href="../styles//sweetAlert.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -16,7 +17,7 @@
 
 <body>
     <div class="logo">
-        <img src="/img/Logo.png" alt="Logo" />
+        <a href="index.html" class="nav-link"><img src="../img/Logo.png" alt="logo" /></a>
     </div>
 <div class="container py-5">
     <div class="row mb-4">
@@ -73,8 +74,10 @@
                                             </label> <input type="text" required class="form-control"> </div>
                                     </div>
                                 </div>
-                                <div class="card-footer"> <button type="button"
-                                        class="btn"> Proceder al envio de dinero </button>
+                                <div class="card-footer">
+                                    <a onclick="ingresos()" href="#" class="btn">
+                                        Ingresar dinero
+                                    </a>
                             </form>
                         </div>
                     </div> 
@@ -93,15 +96,19 @@
                                 </div>
                                 <div class="col-md-12">
                                     <label class="form-label">Numero de cuenta</label>
-                                    <input type="text" class="form-control">
+                                    <input type="number" class="form-control">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">CBU</label>
-                                    <input type="email" class="form-control">
+                                    <input type="text" class="form-control">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Alias</label>
-                                    <input type="email" class="form-control">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Monto</label>
+                                    <input type="number" class="form-control">
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label">Bancos asociados</label>
@@ -115,8 +122,9 @@
                                     </select>
                             </form> </div>
                         <div class="form-group">
-                            <button type="button" class="btn"><i class="fas fa-mobile-alt mr-2"></i>
-                                    Proceder al envio de dinero</button> </p>
+                            <a onclick="ingresos()" href="#" class="btn">
+                                Ingresar dinero
+                            </a></p>
                         </div>
                     </div> 
                 </div>
@@ -124,6 +132,7 @@
         </div>
     </div>
     <script src="ingresos.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

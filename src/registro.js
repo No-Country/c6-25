@@ -4,7 +4,19 @@ $(document).ready(function() {
 });
 
 async function iniciarRegistro(){
-
+ Swal.fire({
+  icon: 'success',
+  title: 'Bievenido',
+  text:'Te registraste correctamente',
+  confirmButtonText: 'Aceptar',
+  confirmButtonColor: 'rgb(233, 169, 8) ',
+  imageUrl:'../img/Logo.png',
+	// imageWidth:'',
+	// imageHeight:'',
+	// imageAlt:'',
+  // text: 'Nos pone muy contento que te sumes a nuestra App',
+  footer: 'My Wallet',
+})
     let datos = {};
 
     datos.nombre = document.getElementById('txtNombre').value;

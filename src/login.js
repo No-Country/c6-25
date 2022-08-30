@@ -4,7 +4,18 @@ $(document).ready(function() {
 });
 
 async function iniciarSesion(){
-
+ Swal.fire({
+  icon: 'success',
+  title: 'Bienvenido',
+  confirmButtonText: 'Aceptar',
+   confirmButtonColor: 'rgb(233, 169, 8) ',
+  imageUrl:'../img/Logo.png',
+	// imageWidth:'',
+	// imageHeight:'',
+	// imageAlt:'',
+  // text: 'Nos pone muy contento que te sumes a nuestra App',
+  footer: 'My Wallet',
+})
     let datos = {};
 
     datos.email = document.getElementById('txtEmail').value;
