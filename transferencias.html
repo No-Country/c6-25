@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ingresos</title>
+        <link rel="shortcut icon" type="logo/png" href="/img/Logo.png" />
+        <link rel="stylesheet" href="../styles/ingresos.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    </head>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="/img/Logo.png" alt="Logo" />
+    </div>
+<div class="container py-5">
+    <div class="row mb-4">
+        <div class="col-lg-8 mx-auto text-center">
+            <h1 class="tittle"><span class="tittle-2">Transferencias</span></h1>
+        </div>
+    </div> <!-- End -->
+    <div class="row">
+        <div class="col-lg-6 mx-auto">
+            <div class="card ">
+                <div class="card-header">
+                    <div class="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2">
+                        <!-- Form principal -->
+                        <ul role="tablist" class="nav bg-light nav-pills rounded nav-fill mb-3">
+                            <li class="nav-item"> <a data-toggle="pill" href="#credit-card" class="nav-link active "> <i class="fa-regular fa-credit-card"></i> Cuenta de Origen </a> </li>
+                            <!--<li class="nav-item"> <a data-toggle="pill" href="#net-banking" class="nav-link "><i class="fa-solid fa-building-columns"></i> Cuenta de Destino </a> </li>-->
+                        </ul>
+                    </div>
+                    <!-- Tarjeta de debito -->
+                    <div class="tab-content">
+                        <!-- Informacion de tarjeta de debito-->
+                        <!--Informacion para el servidor,cambiar id-->
+                        <div id="credit-card" class="tab-pane fade show active pt-3">
+                            <form role="form" onsubmit="event.preventDefault()">
+                                <div class="form-group"> <label for="username">
+                                        <h6>Ingresa tu nombre o mail</h6>
+                                    </label> <input type="text" name="username" placeholder="Ingresa tus datos" required
+                                        class="form-control "> </div>
+                                <div class="form-group"> <label for="cardNumber">
+                                        <h6>Origen de los fondos</h6>
+                                    </label>
+                                    <div class="input-group"> <input type="text" name="cardNumber"
+                                            placeholder="Numero de tarjeta" class="form-control " required>
+                                            <div class="col-md-4">
+                                                
+                                        <label class="form-label">Elegi tu cuenta</label>
+                                                <select name="" id="" class="form-select">
+                                                    <option value="">My Wallet</option>
+                                                    <option value="">Banco Galicia</option>
+                                                    <option value="">Banco Hipotecario</option>
+                                                    <option value="">Banco Nacion</option>
+                                                    <option value="">Banco Patagonia</option>
+                                                    <option value="">Brubank</option>
+                                                    <option value="">Mercado Pago</option>
+                                                </select>
+                                        </form> </div>
+                                        <!--<div class="input-group-append"> <span class="input-group-text text-muted"> <i
+                                                    class="fab fa-cc-visa mx-1"></i> <i
+                                                    class="fab fa-cc-mastercard mx-1"></i> <i
+                                                    class="fab fa-cc-amex mx-1"></i> </span> </div>-->
+                                    </div>
+
+                                 
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <div class="form-group"> <label><span class="hidden-xs">
+                                                    <h6>Fecha de envio</h6>
+                                                </span></label>
+                                            <div class="input-group"> <input type="number" placeholder="MM" name=""
+                                                    class="form-control" required> <input type="number" placeholder="YY"
+                                                    name="" class="form-control" required> </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group mb-4"> <label data-toggle="tooltip"
+                                                title="Ingresa el numero sin puntos ni comas">
+                                                <h6>Importe <i class="fa fa-question-circle d-inline"></i></h6>
+                                            </label> <input type="text" required class="form-control"> </div>
+                                    </div>
+                                        <div class="col-lg-6 mx-auto">
+                                            
+                                                <div class="card-header">
+                                                    <div class="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2">
+                                                        <!-- Form principal -->
+                                                        <ul role="tablist" class="nav bg-light nav-pills rounded nav-fill mb-3">
+                                                            <li class="nav-item"> <a data-toggle="pill" href="#credit-card" class="nav-link active "> <i class="fa-regular fa-credit-card"></i> Cuenta de Destino </a> </li>
+                                                            <!--<li class="nav-item"> <a data-toggle="pill" href="#net-banking" class="nav-link "><i class="fa-solid fa-building-columns"></i> Cuenta de Destino </a> </li>-->
+                                                        </ul>
+                                                    </div>
+                                                    <div class="form-group"> <label for="username">
+                                                        <h6>Ingresa el nombre del destinatario</h6>
+                                                    </label> <input type="text" name="username" placeholder="Ingresa sus datos" required
+                                                        class="form-control "> </div>
+                                                        <div class="form-group"> <label for="cardNumber">
+                                                            <h6>Concepto</h6>
+                                                        </label>
+                                                        <div class="input-group"> <input type="text" name="cardNumber"
+                                                                placeholder="Ingresa el detalle de la transaccion" class="form-control " required>
+                                                                <div class="col-md-4">
+                                                                    
+                                                            <label class="form-label">Elegi su cuenta</label>
+                                                                    <select name="" id="" class="form-select">
+                                                                        <option value="">My Wallet</option>
+                                                                        <option value="">Banco Galicia</option>
+                                                                        <option value="">Banco Hipotecario</option>
+                                                                        <option value="">Banco Nacion</option>
+                                                                        <option value="">Banco Patagonia</option>
+                                                                        <option value="">Brubank</option>
+                                                                        <option value="">Mercado Pago</option>
+                                                                        <option value="">Otra</option>
+                                                                    </select>
+                                                            </form> </div>
+                                      
+
+                                    </ul>
+                                </div>
+                                <div class="card-footer"> <button type="button"
+                                        class="btn"> Enviar </button>
+                            </form>
+
+
+                            
+                        </div>
+                        
+                    </div> 
+
+
+
+
+                    <!-- Bancos asociados -->
+                    
+                      
+                    <!-- <div id="net-banking" class="tab-pane fade pt-3">
+                        <div class="form-group "> <label for="Select Your Bank">
+                                <h6>Ingresa el nombre del destinatario</h6>
+                            <form class="row">
+                                <div class="col-md-6">
+                                    <label class="form-label">Nombre</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Mail</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Ingresa el detalle o concepto</label>
+                                    <input type="text" class="form-control" placeholder="Ingresa el detalle">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">CBU</label>
+                                    <input type="email" class="form-control">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Alias</label>
+                                    <input type="email" class="form-control">
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Bancos asociados</label>
+                                    <select name="" id="" class="form-select">
+                                        <option value="">Banco Galicia</option>
+                                        <option value="">Banco Hipotecario</option>
+                                        <option value="">Banco Nacion</option>
+                                        <option value="">Banco Patagonia</option>
+                                        <option value="">Brubank</option>
+                                        <option value="">Mercado Pago</option>
+                                    </select>
+                            </form> </div> 
+
+
+                        <div class="form-group">
+                            <button type="button" class="btn"><i class="fas fa-mobile-alt mr-2"></i>
+                                    Proceder al envio de dinero</button> </p>
+                        </div>-->
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="transferencias.js"></script>
+</body>
+
+</html>
