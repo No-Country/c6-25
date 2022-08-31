@@ -8,14 +8,10 @@ async function iniciarRegistro(){
   icon: 'success',
   title: 'Bievenido',
   text:'Te registraste correctamente',
-  confirmButtonText: 'Aceptar',
+  confirmButtonText: '<a href="login.html">Aceptar</a>',
   confirmButtonColor: 'rgb(233, 169, 8) ',
   imageUrl:'../img/Logo.png',
-	// imageWidth:'',
-	// imageHeight:'',
-	// imageAlt:'',
-  // text: 'Nos pone muy contento que te sumes a nuestra App',
-  footer: 'My Wallet',
+  footer: 'Copyright © 2022.Todos los derechos reservados. My Wallet',
 })
     let datos = {};
 
@@ -52,6 +48,6 @@ async function iniciarRegistro(){
 })
     } else {
         localStorage.setItem("token", respuesta.token);
-        window.location.href = 'index.html';
+        window.location.href = 'login.html';
     }
 }

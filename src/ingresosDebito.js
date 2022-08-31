@@ -18,7 +18,7 @@ Swal.fire({
 	// imageHeight:'',
 	// imageAlt:'',
   // text: 'Nos pone muy contento que te sumes a nuestra App',
-  footer: 'My Wallet',
+  footer: 'Copyright © 2022.Todos los derechos reservados. My Wallet',
 })
     let datos = {};
     datos.amount = document.getElementById('amount').value;
@@ -40,6 +40,6 @@ Swal.fire({
         // alert("Ingreso el dinero correctamente");
     } else {
         localStorage.setItem("token", respuesta.token);
-        window.location.href = respuesta.url;
+        window.location.href = 'index.html';
     }
 }

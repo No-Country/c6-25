@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/No-Country/c6-25/issues"
   },
-  "homepage": "https://github.com/No-Country/c6-25#readme"
+  "homepage": "https://github.com/No-Country/c6-25#readme",
+  "dependencies": {
+    "react-router-dom": "^6.3.0"
+  }
 }
