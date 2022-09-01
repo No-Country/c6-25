@@ -1,5 +1,5 @@
 body {
-  background: #f5f5f5;
+  background:white;
 }
 .rounded {
   border-radius: 1rem;
@@ -33,7 +33,7 @@ input[type="radio"] {
 }
 
 .logo img {
-  height: 60px;
+  height: 40px;
   margin-right: 10px;
 }
 
@@ -74,5 +74,10 @@ header {
 #menu ul li a {
   color: black;
   text-decoration: none;
+}
+
+.card-body{
+display: inline;
+grid-template-columns: auto;
 }
 

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/No-Country/c6-25#readme",
   "dependencies": {
+    "bootstrap": "^5.2.0",
     "react-router-dom": "^6.3.0"
   }
 }

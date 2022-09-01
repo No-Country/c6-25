@@ -7,23 +7,19 @@ $(document).ready(function() {
 
 });
 
-async function ingresos(){
+async function ingresosDebito(){
 Swal.fire({
   icon: 'success',
   title: 'Ingreso correctamente tu dinero',
   confirmButtonText: 'Aceptar',
   confirmButtonColor: 'rgb(233, 169, 8) ',
   imageUrl:'../img/Logo.png',
-	// imageWidth:'',
-	// imageHeight:'',
-	// imageAlt:'',
-  // text: 'Nos pone muy contento que te sumes a nuestra App',
   footer: 'Copyright © 2022.Todos los derechos reservados. My Wallet',
 })
     let datos = {};
     datos.amount = document.getElementById('amount').value;
-    datos.from = document.getElementById('MyWallet').value;
-    datos.to = document.getElementById('numeroCuenta').value;
+    datos.from = document.getElementById('numeroCuenta').value;
+    datos.to = document.getElementById('MyWallet').value;
 
     const request = await fetch('/api/clientes/{id}/externalPayment	', {
         method: 'POST',
@@ -37,7 +33,6 @@ Swal.fire({
     const respuesta = await request.json();
 
     if(respuesta == null){
-        // alert("Ingreso el dinero correctamente");
     } else {
         localStorage.setItem("token", respuesta.token);
         window.location.href = 'index.html';

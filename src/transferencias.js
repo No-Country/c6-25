@@ -13,7 +13,7 @@ Swal.fire({
 })
     let datos = {};
     datos.amount = document.getElementById('amount').value;
-    datos.from = document.getElementById('cbuOrigen').value;
+    datos.from = document.getElementById('MyWallet').value;
     datos.to = document.getElementById('cbuDestino').value;
 
     const request = await fetch('/api/clientes/{id}/newDeposit', {
