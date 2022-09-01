@@ -1,4 +1,4 @@
-## Bienvenido al repositorio oficial de My Wallet :tw-1f4b0: :tw-1f600
+## Bienvenido al repositorio oficial de My Wallet
 
 ## Titulo del proyecto:
 My Wallet
