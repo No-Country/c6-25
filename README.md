@@ -26,6 +26,7 @@ Java
 ### Frontend
 
 Diego Ignacio Silva Cordoba
+
 Walter Franz
 
 ### Backend
