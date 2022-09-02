@@ -57,4 +57,17 @@ public class MovimientoMapper {
                 .softDelete(Boolean.FALSE)
                 .build();
     }
+
+    public MovimientoEntity transferToEntity(UserEntity user, String to, Double amount, String from, MovimientoTypeEnum debito, Double finalBalance) {
+
+        return MovimientoEntity.builder()
+                .usuario(user)
+                .type(debito)
+                .to(to)
+                .from(from)
+                .amount(amount)
+                .final_balance(finalBalance)
+                .softDelete(Boolean.FALSE)
+                .build();
+    }
 }

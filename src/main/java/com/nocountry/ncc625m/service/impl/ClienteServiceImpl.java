@@ -97,8 +97,19 @@ public class ClienteServiceImpl implements ClienteService {
         Double finalBalance = user.getBalance() - movimientoRequest.getAmount();
         Double finalBalanceTo = userTo.getBalance() + movimientoRequest.getAmount();
 
-        MovimientoEntity movimientoFrom = movimientoMapper.requestToEntity(user, movimientoRequest, MovimientoTypeEnum.DEBITO, finalBalance);
-        MovimientoEntity movimientoTo = movimientoMapper.requestToEntity(userTo, movimientoRequest, MovimientoTypeEnum.DEPOSITO, finalBalanceTo);
+        MovimientoEntity movimientoFrom = movimientoMapper.transferToEntity(user,
+                                                                        userTo.getFirstName()+" "+userTo.getLastName(),
+                                                                        movimientoRequest.getAmount(),
+                                                                        user.getFirstName()+" "+user.getLastName(),
+                                                                        MovimientoTypeEnum.DEBITO,
+                                                                        finalBalance);
+
+        MovimientoEntity movimientoTo = movimientoMapper.transferToEntity(userTo,
+                                                                        userTo.getFirstName()+" "+userTo.getLastName(),
+                                                                        movimientoRequest.getAmount(),
+                                                                        user.getFirstName()+" "+user.getLastName(),
+                                                                        MovimientoTypeEnum.DEPOSITO,
+                                                                        finalBalanceTo);
 
         user.getMovimientos().add(movimientoFrom);
         userTo.getMovimientos().add(movimientoTo);

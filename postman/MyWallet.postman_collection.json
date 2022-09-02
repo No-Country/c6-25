@@ -45,7 +45,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\":\"siun@email.com\",\r\n    \"password\":\"pass\"\r\n}",
+							"raw": "{\r\n    \"email\":\"diego@silva.com\",\r\n    \"password\":\"pass\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -75,7 +75,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzaXVuQGVtYWlsLmNvbSIsImlhdCI6MTY2MTExNTY0OCwiZXhwIjoxNjYxMTc2MTI4fQ.yJGi3kL26VI4LLKJKcAXdwk7JqN1zgL_Po5N3MEVywj2HBvKSwIaWCtiRpGFvw1OTPhrH9swVnZzl9Ix9vZVlQ",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkaWVnb0BzaWx2YS5jb20iLCJpYXQiOjE2NjE4NzgwOTUsImV4cCI6MTY2MTkzODU3NX0.mwF3zFZzOH3EFxn7WTaIgcKgI4z8nVl0oBGu_UiQlFiRK0FCf9ptl9t-fVRQc5z0GK7HTE5ucQq_0nqmnSxCkA",
 									"type": "string"
 								}
 							]
@@ -110,7 +110,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzaXVuQGVtYWlsLmNvbSIsImlhdCI6MTY2MTExNTY0OCwiZXhwIjoxNjYxMTc2MTI4fQ.yJGi3kL26VI4LLKJKcAXdwk7JqN1zgL_Po5N3MEVywj2HBvKSwIaWCtiRpGFvw1OTPhrH9swVnZzl9Ix9vZVlQ",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkaWVnb0BzaWx2YS5jb20iLCJpYXQiOjE2NjE4NzgwOTUsImV4cCI6MTY2MTkzODU3NX0.mwF3zFZzOH3EFxn7WTaIgcKgI4z8nVl0oBGu_UiQlFiRK0FCf9ptl9t-fVRQc5z0GK7HTE5ucQq_0nqmnSxCkA",
 									"type": "string"
 								}
 							]
@@ -127,7 +127,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/api/clientes/4/newDeposit",
+							"raw": "localhost:8080/api/clientes/newDeposit",
 							"host": [
 								"localhost"
 							],
@@ -135,7 +135,6 @@
 							"path": [
 								"api",
 								"clientes",
-								"4",
 								"newDeposit"
 							]
 						}
@@ -219,6 +218,44 @@
 								"externalPayment"
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmdWxhbm9AZGV0YWw1LmNvbSIsImlhdCI6MTY2MTg3NzA3OSwiZXhwIjoxNjYxOTM3NTU5fQ.UPibO_cwV_TOJI1gOY7UmnzDRU4A5KLXh8v4bIokTBTjVG2Tt6WCI-KjOPZi4EnkNYeM-sGcgIt7wA-hsAenyw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/clientes/7",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transferir",
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
