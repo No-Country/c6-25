@@ -18,7 +18,7 @@ JavaScript
 
 ### Backend
 
-Posman
+Postman
 Java
 
 ## Roles de cada integrante
