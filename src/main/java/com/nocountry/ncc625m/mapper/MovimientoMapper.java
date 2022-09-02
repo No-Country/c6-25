@@ -21,6 +21,8 @@ public class MovimientoMapper {
                 .date(entity.getDate())
                 .type(entity.getType())
                 .amount(entity.getAmount())
+                .from(entity.getFrom())
+                .to(entity.getTo())
                 .final_balance(entity.getFinal_balance())
                 .build();
     }
@@ -51,6 +53,19 @@ public class MovimientoMapper {
                 .to(movimientoRequest.getTo())
                 .from(movimientoRequest.getFrom())
                 .amount(movimientoRequest.getAmount())
+                .final_balance(finalBalance)
+                .softDelete(Boolean.FALSE)
+                .build();
+    }
+
+    public MovimientoEntity transferToEntity(UserEntity user, String to, Double amount, String from, MovimientoTypeEnum debito, Double finalBalance) {
+
+        return MovimientoEntity.builder()
+                .usuario(user)
+                .type(debito)
+                .to(to)
+                .from(from)
+                .amount(amount)
                 .final_balance(finalBalance)
                 .softDelete(Boolean.FALSE)
                 .build();

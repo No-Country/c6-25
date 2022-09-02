@@ -2,6 +2,7 @@ package com.nocountry.ncc625m.dto.request;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.format.annotation.NumberFormat;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -18,6 +19,7 @@ public class RegisterRequest {
 	private String lastName;
 
 	@NotNull(message = "age can0t be null")
+	@NumberFormat
 	private Long age;
 
 	@NotBlank(message = "the email can't  be blank")

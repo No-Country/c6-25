@@ -20,4 +20,8 @@ public class MovimientoResponse {
 
     private Double final_balance;
 
+    private String from;
+
+    private String to;
+
 }
