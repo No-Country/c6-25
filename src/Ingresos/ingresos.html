@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingresos</title>
     <link rel="shortcut icon" type="logo/png" href="/img/Logo.png" />
-    <link rel="stylesheet" href="../styles/ingresos.css">
-    <link rel="stylesheet" href="../styles//sweetAlert.css">
+    <link rel="stylesheet" href="../Ingresos/ingresos.css">
+    <link rel="stylesheet" href="/styles/sweetAlert.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -17,7 +17,7 @@
 
 <body>
     <div class="logo">
-        <a href="index.html" class="nav-link"><img src="../img/Logo.png" alt="logo" /></a>
+        <a href="../Dashboard/dashboard.html" class="nav-link"><img src="/img/Logo.png" alt="logo" /></a>
     </div>
 <div class="container py-5">
     <div class="row mb-4">
@@ -58,6 +58,7 @@
                                                     class="fab fa-cc-amex mx-1"></i> </span> </div>
                                     </div>
                                 </div>
+                                <!--agregar input monto-->
                                 <div class="row">
                                     <div class="col-sm-8">
                                         <div class="form-group"> <label><span class="hidden-xs">
@@ -76,6 +77,10 @@
                                                 title="Código seguridad de tres dígitos en el reverso de su tarjeta">
                                                 <h6>CVV <i class="fa fa-question-circle d-inline"></i></h6>
                                             </label> <input type="text" required class="form-control"> </div>
+                                            <div class="col-md-16">
+                                                <label class="form-label">Monto</label>
+                                                <input type="number" class="form-control" id="amount2" method="POST">
+                                            </div>
                                     </div>
                                 </div>
                                 <div class="card-footer">
@@ -112,17 +117,17 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label">Monto</label>
-                                    <input type="number" class="form-control" method="POST">
+                                    <input type="number" class="form-control" id="amount" method="POST">
                                 </div>
                                 <div class="col-md-4">
                                     <label class="form-label">Bancos asociados</label>
-                                    <select name="" id="" class="form-select">
-                                        <option value="">Banco Galicia</option>
-                                        <option value="">Banco Hipotecario</option>
-                                        <option value="">Banco Nacion</option>
-                                        <option value="">Banco Patagonia</option>
-                                        <option value="">Brubank</option>
-                                        <option value="">Mercado Pago</option>
+                                    <select name="" id="nombreBanco" class="form-select">
+                                        <option value="Banco Galicia">Banco Galicia</option>
+                                        <option value="Banco Hipotecario">Banco Hipotecario</option>
+                                        <option value="Banco Nacion">Banco Nacion</option>
+                                        <option value="Banco Patagonia">Banco Patagonia</option>
+                                        <option value="Brubank">Brubank</option>
+                                        <option value="Mercado Pago">Mercado Pago</option>
                                     </select>
                             </form> </div>
                         <div class="form-group">
@@ -135,8 +140,8 @@
             </div>
         </div>
     </div>
-    <script src="ingresosBanco.js"></script>
-    <script src="ingresosDebito.js"></script>
+    <script src="../Ingresos/ingresosBanco.js"></script>
+    <script src="../Ingresos/ingresosDebito.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 

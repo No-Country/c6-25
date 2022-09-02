@@ -3,20 +3,13 @@ $(function () {
 });
 
 async function transferenciasBanco(){
-Swal.fire({
-  icon: 'success',
-  title: 'La transferencia se realizo correctmente',
-  confirmButtonText: 'Aceptar',
-  confirmButtonColor: 'rgb(233, 169, 8) ',
-  imageUrl:'../img/Logo.png',
-  footer: 'Copyright © 2022.Todos los derechos reservados. My Wallet',
-})
+    let idTo = document.getElementById("cbuDestino").value;
     let datos = {};
     datos.amount = document.getElementById('amount').value;
-    datos.from = document.getElementById('MyWallet').value;
+    datos.from = 'MyWallet';
     datos.to = document.getElementById('cbuDestino').value;
 
-    const request = await fetch('/api/clientes/{id}/newDeposit', {
+    const request = await fetch('/api/clientes?transferTo=' + idTo, {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
@@ -27,9 +20,16 @@ Swal.fire({
       });
     const respuesta = await request.json();
 
-    if(respuesta == errors[0]){
+  if (respuesta.errors == null){
     } else {
-        localStorage.setItem("token", respuesta.token);
-        window.location.href = 'index.html';
+        Swal.fire({
+  icon: 'success',
+  title: 'La transferencia se realizo correctmente',
+  confirmButtonText: '<a href="/src/Dashboard/dashboard.html">Aceptar</a>',
+  // confirmButtonText: 'Aceptar',
+  confirmButtonColor: 'rgb(233, 169, 8) ',
+  imageUrl:'../img/Logo.png',
+  footer: 'Copyright © 2022.Todos los derechos reservados. My Wallet',
+})
     }
 }

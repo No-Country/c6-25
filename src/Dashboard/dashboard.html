@@ -8,8 +8,8 @@
 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
         <link rel="shortcut icon" type="logo/png" href="/img/Logo.png"/>
-        <link rel="stylesheet" href="../styles/style.css">
-        <link rel="stylesheet" href="../styles/form.css">
+        <link rel="stylesheet" href="../Dashboard/style.css">
+        <link rel="stylesheet" href="./style.css">
         
     </head>
     <body>
@@ -18,16 +18,13 @@
             <aside>
                 <div class="top">
                     <div class="logo">
-                        <img src="../img/Logo.png" alt="logo">
+                        <img src="/img/Logo.png" alt="logo">
                     </div>
                     <div class="close" id="close-btn">
-                        <!-- <span class="material-icons-sharp">
-                            close
-                        </span> -->
                     </div>
                 </div>
                 <div class="sidebar">
-                    <a href="registro.html">
+                    <a href="../Registro/registro.html">
                         <span class="material-icons-sharp">person_outline</span>
                             <h3>Cuenta</h3>
                     </a>
@@ -35,23 +32,23 @@
                         <span class="material-icons-sharp">receipt_long</span>
                         <h3>Balances</h3>
                     </a>
-                    <a href="pago.html">
+                    <a href="../Pago//pago.html">
                         <span class="material-icons-sharp">payments </span>
                         <h3>Pago de Servicios</h3>
                     </a>
-                    <a href="transferencias.html">
+                    <a href="../Transferencias/transferencias.html">
                         <span class="material-icons-sharp">inventory</span>
                         <h3>Transferencias</h3>
                     </a>
-                    <a href="ingresos.html">
+                    <a href="../Ingresos/ingresos.html">
                         <span class="material-icons-sharp">attach_money</span>
                         <h3>Ingresos</h3>
                     </a>
-                    <a href="nosotros.html">
+                    <a href="../Nosotros/nosotros.html">
                         <span class="material-icons-sharp">people </span>
                         <h3>Sobre nosotros</h3>
                     </a>
-                    <a href="faq.html">
+                    <a href="../faq.html">
                         <span class="material-icons-sharp">quiz</span>
                         <h3>Preguntas frecuentes</h3>
                     </a>
@@ -59,7 +56,7 @@
                         <span class="material-icons-sharp">settings</span>
                         <h3>Configuracion</h3>
                     </a>
-                    <a href="registro.html">
+                    <a href="../Registro/registro.html">
                         <span class="material-icons-sharp">logout</span>
                         <h3>Logout</h3>
                     </a>
@@ -78,12 +75,12 @@
                         <div class="middle">
                             <div class="left">
                                 <h3>Balance disponible</h3>
-                                <h1>$98.741</h1>
+                                <h1 id="amount"></h1>
                             </div>
                             <div class="progress">
-                                <svg>
+                                <!-- <svg>
                                     <circle cx="38" cy="38" r="36"></circle>
-                                </svg>
+                                </svg> -->
                                 <div class="number">
                                     <!-- <p>81%</p> Porcentaje -->
                                 </div>
@@ -98,10 +95,10 @@
                     <table>
                     <thead>
                         <tr>
-                            <th>Nombre</th>
-                            <th>Numero de transaccion</th>
-                            <th>Pago</th>
-                            <th>Estado</th>
+                            <th>Dato</th>
+                            <th>Tipo</th>
+                            <th>Monto</th>
+                            <th>Balance final</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -120,17 +117,13 @@
                         </span>
                     </button>
                     <div class="theme-toggler">
-                        <span class="material-icons-sharp active">
-                            light_mode
-                        </span>
-                        <span class="material-icons-sharp">
-                            dark_mode
-                        </span>
+                        <span class="material-icons-sharp active">light_mode</span>
+                        <span class="material-icons-sharp">dark_mode</span>
                     </div>
                     <div class="profile">
                         <div class="info">
                             <p>Hola,<b>Bienvenido</b></p>
-                            <a href="login.html" method="POST">
+                            <a href="../Index/index.html" method="POST">
                             <small class="text-muted">Login</small>
                         </div>
                         <div class="profile-photo">
@@ -140,10 +133,10 @@
                 </div>
             </div> 
         </div>
-        <script src="orders.js"></script>
-        <script src="index.js"></script>
+        <script src="/src/orders.js"></script>
+        <script src="../Dashboard/dashboard.js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="sweetAlert.js"></script>
+        <script src="/src/sweetAlert.js"></script>
         
     </body>
     </html>

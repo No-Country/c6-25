@@ -1,10 +1,7 @@
 
-$(document).ready(function() {
-});
 
 
 let boton = document.getElementById("btn-enviar");
-// let resultado = document.querySelector(".resultado");
 
 boton.addEventListener("click",(e)=>{
     e.preventDefault();
@@ -26,9 +23,9 @@ async function iniciarSesion(){
 Swal.fire({
   icon: 'success',
   title: 'Bienvenido',
-  confirmButtonText: '<a href="index.html">Aceptar</a>',
+  confirmButtonText: '<a href="/src/Dashboard/dashboard.html">Aceptar</a>',
   confirmButtonColor: 'rgb(233, 169, 8) ',
-  imageUrl:'../img/Logo.png',
+  imageUrl:'/img/Logo.png',
   footer: 'Copyright © 2022.Todos los derechos reservados. My Wallet',
 })
   

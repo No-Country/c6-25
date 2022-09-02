@@ -37,38 +37,38 @@ $(function () {
 $(document).ready(function () {});
 
 async function pagarServicios() {
-  Swal.fire({
-    icon: "success",
-    title: "Ingreso correctamente tu pago",
-    confirmButtonText: "Aceptar",
-    confirmButtonColor: "rgb(233, 169, 8) ",
-    imageUrl: "../img/Logo.png",
-    footer: "Copyright © 2022.Todos los derechos reservados. My Wallet",
-  });
-
+ 
   let datos = {};
   datos.amount = document.getElementById("amount").value;
-  datos.from = document.getElementById("MyWallet").value;
+  datos.from = "MyWallet";
   datos.to = document.getElementById("concept").value;
 
-  const request = await fetch("/api/clientes/{id}/newDeposit", {
+  const request = await fetch("/api/clientes/newDebit", {
     method: "POST",
     headers: {
-      Accept: "application/json",
+      "Accept": "application/json",
       "Content-Type": "application/json",
-      Authorization: localStorage.getItem("token"),
+      "Authorization": localStorage.getItem("token"),
     },
     body: JSON.stringify(datos),
   });
   const respuesta = await request.json();
 
-  if (respuesta == errors[0]) {
+  if (respuesta.errors == null) {
     Swal.fire({
       icon: "error",
       text: "No se realizo el pago correctamente",
     });
   } else {
-    localStorage.setItem("token", respuesta.token);
-    window.location.href = "index.html";
+     Swal.fire({
+    icon: "success",
+    title: "Ingreso correctamente tu pago",
+    confirmButtonText: '<a href="/src/Dashboard/dashboard.html">Aceptar</a>',
+    // confirmButtonText: "Aceptar",
+    confirmButtonColor: "rgb(233, 169, 8) ",
+    imageUrl: "/img/Logo.png",
+    footer: "Copyright © 2022.Todos los derechos reservados. My Wallet",
+  });
+
   }
 }
