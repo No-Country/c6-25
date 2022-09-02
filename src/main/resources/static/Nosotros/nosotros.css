@@ -1,0 +1,83 @@
+body {
+  background:white;
+}
+.rounded {
+  border-radius: 1rem;
+}
+.nav-pills .nav-link {
+  color: #555;
+}
+.nav-pills .nav-link.active {
+  color: white;
+}
+input[type="radio"] {
+  margin-right: 5px;
+}
+.bold {
+  font-weight: bold;
+}
+.btn {
+  width: 100%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgb(20, 14, 1);
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(243, 156, 6);
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.tittle {
+  border-radius: 40px;
+  margin: 0%;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: rgb(14, 13, 12);
+  font-size: 20px;
+}
+
+.tittle-2 {
+  background-color: rgb(243, 156, 6);
+}
+
+header {
+  display: flex;
+  background-color: white;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+#menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu ul li {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px;
+}
+
+#menu ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.card-body{
+display: inline;
+grid-template-columns: auto;
+}
+
